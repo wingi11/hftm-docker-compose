@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+    frontend:
+      image: frontend:latest
+      depends_on:
+        - api
+      ports:
+        - "80:80"
+        
+    api:
+      image: api:latest
+      ports:
+        - "8080:8080"
+      depends_on:
+        - db
+      environment:
+        - CONNECTION_STRING=User ID=postgres;Password=${POSTGRES_PASSWORD};Host=db;Port=5432;Database=test-db;
+
+    db:
+      image: postgres:latest
+      environment:
+        - POSTGRES_PASSWORD
+        - POSTGRES_DB=test-db
+      volumes:
+        - ./data:/var/lib/postgresql/data:rw
