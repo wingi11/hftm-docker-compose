@@ -5,9 +5,9 @@ Dieses Projekt verwendet Docker Compose, um eine Anwendung aus drei Diensten auf
 
 Die Dienste sind wie folgt konfiguriert:
 
-1. `frontend`: Eine Webanwendung, die auf dem Bild `frontend:latest` basiert.
-2. `api`: Eine API-Anwendung, die auf dem Bild `api:latest` basiert und eine Verbindung zur Datenbank herstellt.
-3. `db`: Eine PostgreSQL-Datenbank, die auf dem Bild `postgres:latest` basiert.
+1. `frontend`: Eine Webanwendung, die auf dem Image `frontend:latest` basiert.
+2. `api`: Eine API-Anwendung, die auf dem Image `api:latest` basiert und eine Verbindung zur Datenbank herstellt.
+3. `db`: Eine PostgreSQL-Datenbank, die auf dem Image `postgres:latest` basiert.
 
 ## Anforderungen
 - Docker
